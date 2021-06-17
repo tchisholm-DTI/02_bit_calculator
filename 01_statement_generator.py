@@ -15,5 +15,5 @@ def statement_generator(text, decoration):
 
     return ""
 
-    # Main routine goes here
-    statement_generator("hello world", "-")
+# Main routine goes here
+statement_generator("hello world", "-")
