@@ -1,16 +1,34 @@
 # Checks user choice is 'integer', 'text or 'image
 def user_choice():
 
+    # List of valid responses
+    text_ok = ["text", "t", "txt"]
+    integer_ok = ["integer", "int", "#", "number"]
+    image_ok = ["image", "img", "pix", "picture", "pic"]
+
     valid = False
     while not valid:
 
         # Asks user for choice and change response to lowercase
         response = input("File type (integer / text / image): ").lower()
 
-        # If they choose "t" or "text", return "text"
-        text_ok = ["text", "t", "txt"]
+        # Checks for valid response and returns text, integer, or image
+        
         if response in text_ok:
             return "text"
+
+        elif response in integer_ok:
+            return "integer"
+
+        elif response in image_ok:
+            return "image"
+
+        elif response == "i":
+            want_integer = input("Please <enter> for an integer or any key for an image: ")
+            if want_integer == "":
+                return "integer"
+            else:
+                return "image"
 
         else:
             # If response is not valid, output an error
