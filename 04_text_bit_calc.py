@@ -18,5 +18,5 @@ def text_bits():
 
     return ""
 
-    # Main routine goes here
-    
+# Main routine goes here
+text_bits()
