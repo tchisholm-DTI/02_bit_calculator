@@ -159,15 +159,17 @@ while keep_going == "":
 
     # For integers, ask for integer
     if data_type =="integer":
-        var_integer = num_check("Enter an integer:", 0)
+        int_bits()
 
     # For images, ask for width and height
     # (must be an integer more than/equal to 1)
     elif data_type =="image":
-        image_width = num_check("Image width? ", 1)
-        print()
-        image_height = num_check("Image height? ", 1)
+        image_bits()
 
     #For text, ask for a string
     else:
-        var_text = input("Enter some text: ")
+        text_bits()
+    
+    print()
+    keep_going = input("Press <enter> to continue or any key to quit ")
+    print()
