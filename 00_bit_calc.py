@@ -78,6 +78,70 @@ def num_check(question, low):
             print(error)
             print()
 
+
+#Calculates the # of bits for text (# of characters x 8)
+def text_bits():
+
+    print()
+    # Ask user for a string ...
+    var_text = input("Enter some text: ")
+
+    # Calculate # of bits (length of string x 8)
+    var_length = len(var_text)
+    num_bits = 8 * var_length
+
+    # Outputs answer with working
+    print()
+    print("\ '{}\' has {} characters ...".format(var_text, var_length))
+    print("# of bits is {} x 8...".format(var_length))
+    print("We need {} bits to represent {}".format(num_bits, var_text))
+    print()
+
+    return ""
+
+# Finds # of bits for 24 bit colour
+def image_bits():
+
+    # Get width and height ...
+    image_width = num_check("Image width? ", 1)
+    image_height = num_check("Image height? ", 1)
+
+    # Calculate the number of pixels
+    num_pixels = image_width * image_height
+
+    # Calculate # of bits (num pixels x 24)
+    num_bits = num_pixels * 24
+
+    # Outputs answer with working
+    print()
+    print("# of pixels = {} x {} = {}".format(image_height, image_width, num_pixels))
+    print("# of bits is {} x 24 = {}".format(num_pixels, num_bits))
+    print()
+
+    return ""
+
+# Converts decimal to binary and states how 
+# many bits are needed to represent the original integer
+def int_bits():
+
+    # Get integer (must be >= 0)
+    var_integer = num_check("Please enter an integer:", 0)
+
+    # Source for code below is
+    # # https://stackoverflow.com/questions/699866/python-int-to-binary-string
+
+    var_binary = "{0:b}" .format(var_integer)
+
+    # Calculate # of bits (length of string above)
+    num_bits = len(var_binary)
+
+    # Output answer with working
+    print()
+    print("{} in binary is {}".format(var_integer, var_binary))
+    print("# of bits is {}".format(num_bits))
+
+    return ""
+
 # Main routine goes here
 
 # Heading
