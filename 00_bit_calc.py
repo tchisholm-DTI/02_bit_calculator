@@ -170,7 +170,7 @@ first_time = input("Press <enter> to see the instructions or any key to continue
 
 if first_time == "":
     instructions()
-    
+
 # Loop to allow multiple calculations per session
 keep_going = ""
 while keep_going == "":
