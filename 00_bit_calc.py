@@ -16,6 +16,20 @@ def statement_generator(text, decoration):
     return ""
 
 
+# Displays instructions/information
+def instructions():
+
+    statement_generator("Instructions/information", "-")
+    print()
+    print("Please choose a data type (image/text/integer)")
+    print()
+    print("This program assumes that images are being represented in 24 bit colour (ie: 24 bits per pixel). For text, we assume that ascii encoding is being used (8 bits per character.) ")
+    print()
+    print("Complete a many calculations as necessary, pressing <enter> at the end of each calculation or any key to quit")
+    print()
+    return ""
+
+
 # Checks user choice is 'integer'. 'text' or 'image'
 def user_choice():
 
@@ -52,6 +66,7 @@ def user_choice():
             # If response is not valid, output an error
             print("Please choose a valid file type!")
             print()
+
 
 # Checks input is a number that is more than a given value
 def num_check(question, low):
@@ -99,6 +114,7 @@ def text_bits():
 
     return ""
 
+
 # Finds # of bits for 24 bit colour
 def image_bits():
 
@@ -119,6 +135,7 @@ def image_bits():
     print()
 
     return ""
+
 
 # Converts decimal to binary and states how 
 # many bits are needed to represent the original integer
@@ -142,13 +159,18 @@ def int_bits():
 
     return ""
 
+
 # Main routine goes here
 
 # Heading
 statement_generator("Bit Calculator for Integers, Text & Images", "-")
 
 # Displays instructions if user has not used the program before
+first_time = input("Press <enter> to see the instructions or any key to continue")
 
+if first_time == "":
+    instructions()
+    
 # Loop to allow multiple calculations per session
 keep_going = ""
 while keep_going == "":
