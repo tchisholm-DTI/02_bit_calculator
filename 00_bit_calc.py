@@ -18,7 +18,6 @@ def statement_generator(text, decoration):
 
 # Displays instructions/information
 def instructions():
-
     statement_generator("Instructions/information", "-")
     print()
     print("Please choose a data type (image/text/integer)")
